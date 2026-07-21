@@ -74,9 +74,8 @@
     position:sticky;
     top:0;
     z-index:50;
-    background:rgba(245,242,234,0.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--line);
+    background:var(--mangue);
+    border-bottom:1px solid rgba(0,0,0,0.25);
   }
   .nav-wrap{
     max-width:1100px;
@@ -93,38 +92,10 @@
     gap:10px;
     font-family:'Space Grotesk', sans-serif;
     font-weight:600;
-    font-size:1.05rem;
+    font-size:1.5rem;
+    line-height:1.2;
     text-decoration:none;
-    color:var(--ink);
-  }
-  .brand .swatch{
-    width:14px;height:14px;
-    background:var(--forest);
-    border:1px solid var(--ink);
-    flex-shrink:0;
-  }
-  nav.legend{
-    display:flex;
-    gap:22px;
-    list-style:none;
-    margin:0;padding:0;
-  }
-  nav.legend a{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    color:var(--ink);
-    text-decoration:none;
-    font-size:0.85rem;
-    font-family:'IBM Plex Mono', monospace;
-  }
-  nav.legend .sw{
-    width:10px;height:10px;
-    border:1px solid var(--ink);
-    flex-shrink:0;
-  }
-  @media (max-width:720px){
-    nav.legend{display:none;}
+    color:var(--paper);
   }
 
   /* ---------- Hero / title block ---------- */
@@ -502,12 +473,7 @@
 
 <header>
   <div class="nav-wrap">
-    <a href="#top" class="brand"><span class="swatch"></span>Geoprocessamento, Inteligência Espacial e Soluções Geográficas!</a>
-    <ul class="legend">
-      <li><a href="#servicos"><span class="sw" style="background:var(--forest)"></span>Serviços</a></li>
-      <li><a href="#projetos"><span class="sw" style="background:var(--urban)"></span>Projetos</a></li>
-      <li><a href="#contato"><span class="sw" style="background:var(--water)"></span>Contato</a></li>
-    </ul>
+    <a href="#top" class="brand">Geoprocessamento, Inteligência Espacial e Soluções Geográficas!</a>
   </div>
 </header>
 
@@ -528,6 +494,7 @@
     <div class="cta-row">
       <a href="#contato" class="btn btn-primary">Solicitar orçamento →</a>
       <a href="#projetos" class="btn btn-outline">Ver projetos</a>
+      <a href="#sobre" class="btn btn-outline">Sobre mim</a>
     </div>
   </div>
 
