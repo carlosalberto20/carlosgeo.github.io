@@ -278,6 +278,19 @@
     height:auto;
     display:block;
   }
+  .project-media--compact{
+    background:var(--paper);
+    display:flex;
+    justify-content:center;
+    padding:24px;
+  }
+  .project-media--compact img{
+    width:auto;
+    max-width:100%;
+    max-height:420px;
+    height:auto;
+    display:block;
+  }
   .project-media iframe{
     width:100%;
     height:520px;
@@ -545,12 +558,10 @@
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--mangue)"></span><h3>Vetorização de Dados Espaciais</h3></div>
         <p>Conversão de imagens, plantas e bases analógicas em camadas vetoriais precisas, prontas para uso em SIG.</p>
-        <a href="#projetos" class="card-link">Ver exemplos →</a>
       </div>
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--pastagem)"></span><h3>Consultoria e Treinamentos</h3></div>
         <p>Aulas de QGIS para produção de mapas e consultoria em projetos que envolvam geoprocessamento.</p>
-        <a href="#projetos" class="card-link">Ver exemplos →</a>
       </div>
     </div>
   </section>
@@ -578,7 +589,7 @@
     </div>
 
     <div class="project" id="projeto-tematico">
-      <div class="project-media">
+      <div class="project-media project-media--compact">
         <img src="assets/uso_ocupacao_solo.jpg" alt="Mapa de uso e ocupação do solo da cidade do Recife-PE" loading="lazy">
       </div>
       <div class="project-body">
@@ -593,7 +604,7 @@
     </div>
 
     <div class="project" id="projeto-localizacao">
-      <div class="project-media">
+      <div class="project-media project-media--compact">
         <img src="assets/localizacao_recife.jpg" alt="Mapa de localização do município de Recife-PE" loading="lazy">
       </div>
       <div class="project-body">
