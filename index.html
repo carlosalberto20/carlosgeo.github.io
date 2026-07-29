@@ -126,12 +126,28 @@
     width:26px;height:1px;
     background:var(--water);
   }
+  .hero-title-row{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  .hero-logo{
+    height:88px;
+    width:auto;
+    object-fit:contain;
+    border:1.5px solid var(--ink);
+    background:var(--mangue);
+    padding:8px 14px;
+    flex-shrink:0;
+  }
   h1{
     font-family:'Space Grotesk', sans-serif;
     font-weight:700;
     font-size:clamp(2.3rem, 5.5vw, 4rem);
     line-height:1.04;
-    margin:0 0 22px;
+    margin:0;
     letter-spacing:-0.01em;
   }
   h1 em{
@@ -513,7 +529,10 @@
 
   <div class="hero">
     <div class="eyebrow">Serviços de geoprocessamento, Consultoria &amp; Treinamentos</div>
-    <h1>Mapas que <em>explicam</em><br>o território.</h1>
+    <div class="hero-title-row">
+      <img src="assets/logo-full.jpg" alt="Logo Carlos Alberto Geógrafo" class="hero-logo">
+      <h1>Mapas que <em>explicam</em><br>o território.</h1>
+    </div>
     <p class="hero-sub">
       Produção de mapas de localização, mapas temáticos e interativos
       para projetos que precisam enxergar o espaço com precisão —
