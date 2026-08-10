@@ -80,8 +80,10 @@
 
   /* ---------- Legend nav ---------- */
   header{
-    position:sticky;
+    position:fixed;
     top:0;
+    left:0;
+    right:0;
     z-index:50;
     background:var(--mangue);
     border-bottom:1px solid rgba(0,0,0,0.25);
@@ -111,6 +113,14 @@
     background:var(--forest);
     border:1px solid var(--paper);
     flex-shrink:0;
+  }
+
+  /* Offset page content so it isn't hidden under the fixed header */
+  main{
+    padding-top:76px;
+  }
+  @media (max-width:640px){
+    main{padding-top:96px;}
   }
 
   /* ---------- Hero / title block ---------- */
@@ -259,6 +269,8 @@
   .legend-card{
     background:var(--paper);
     padding:26px 24px;
+    display:flex;
+    flex-direction:column;
   }
   .legend-card .head{
     display:flex;
@@ -283,18 +295,22 @@
     color:rgba(22,35,42,0.75);
     margin:0 0 16px;
   }
+  .legend-card .card-link-wrap{
+    margin-top:auto;
+  }
   .card-link{
     display:inline-flex;
     align-items:center;
     gap:6px;
     font-family:'IBM Plex Mono', monospace;
     font-size:0.78rem;
-    color:var(--water);
+    color:var(--ink);
     text-decoration:none;
-    border-bottom:1px solid transparent;
-    transition:border-color .15s ease;
+    border:1px solid var(--ink);
+    padding:8px 14px;
+    transition:background .15s ease, color .15s ease;
   }
-  .card-link:hover{border-bottom-color:var(--water);}
+  .card-link:hover{background:var(--ink); color:var(--paper);}
 
   /* ---------- Projects ---------- */
   .project{
@@ -558,7 +574,7 @@
 
 <header>
   <div class="nav-wrap">
-    <a href="#top" class="brand">Serviços de Geoprocessamento, Consultoria &amp; Treinamentos</a>
+    <a href="https://carlosgeo.com.br/#top" class="brand">Serviços de Geoprocessamento, Consultoria &amp; Treinamentos</a>
   </div>
 </header>
 
@@ -590,12 +606,12 @@
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--forest)"></span><h3>Mapas Temáticos</h3></div>
         <p>Uso e ocupação do solo, cobertura vegetal, climáticos e outros recortes analíticos do território.</p>
-        <a href="#projeto-tematico" class="card-link">Ver exemplo →</a>
+        <div class="card-link-wrap"><a href="#projeto-tematico" class="card-link">Ver exemplo →</a></div>
       </div>
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--water)"></span><h3>Mapas de Localização</h3></div>
         <p>Localização da sua área de estudo em diferentes escalas.</p>
-        <a href="#projeto-localizacao" class="card-link">Ver exemplo →</a>
+        <div class="card-link-wrap"><a href="#projeto-localizacao" class="card-link">Ver exemplo →</a></div>
       </div>
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--urban)"></span><h3>Mapas Físicos</h3></div>
@@ -604,7 +620,7 @@
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--sand)"></span><h3>Mapas Interativos</h3></div>
         <p>Visualizações web navegáveis — coropléticos, marcadores e camadas — para explorar dados espacialmente no navegador.</p>
-        <a href="#projeto-interativo" class="card-link">Ver exemplo →</a>
+        <div class="card-link-wrap"><a href="#projeto-interativo" class="card-link">Ver exemplo →</a></div>
       </div>
       <div class="legend-card">
         <div class="head"><span class="sw" style="background:var(--mangue)"></span><h3>Treinamentos</h3></div>
@@ -670,6 +686,24 @@
     </div>
   </section>
 
+  <section id="sobre">
+    <div class="section-head">
+      <h2>Sobre mim</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <img src="assets/foto.jpeg" alt="Foto de perfil de Carlos Alberto, Geógrafo" class="about-photo">
+      </div>
+      <div class="about-text">
+        <div class="eyebrow">Quem faz os mapas?</div>
+        <h3>Opa gente, meu nome é Carlos Alberto! 👋</h3>
+        <p>Sou Geógrafo formado pela Universidade Federal de Pernambuco que atua na área de Geoprocessamento e Produção de Mapas há 4 anos. Atuei em projetos de Monitoramento Ambiental, Monitoramento Agrícola e Pesquisas da Climatologia Urbana.</p>
+        <p>Meu propósito é usar todos os meus conhecimentos e experiências que acumulei nesses anos para apoiar profissionais, pesquisadores e empresas nos projetos que envolvem o meio ambiente, planejamento territorial e inteligência geográfica.</p>
+        <p>O mundo das Geotecnologias é incrível. 🌐🤩</p>
+      </div>
+    </div>
+  </section>
+
   <section id="contato">
     <div class="section-head">
       <h2>Contatos 📞</h2>
@@ -708,24 +742,6 @@
         </div>
         <button type="submit" class="submit-btn">Enviar mensagem →</button>
       </form>
-    </div>
-  </section>
-
-  <section id="sobre">
-    <div class="section-head">
-      <h2>Sobre mim</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-photo-wrap">
-        <img src="assets/foto.jpeg" alt="Foto de perfil de Carlos Alberto, Geógrafo" class="about-photo">
-      </div>
-      <div class="about-text">
-        <div class="eyebrow">Quem faz os mapas?</div>
-        <h3>Opa gente, meu nome é Carlos Alberto! 👋</h3>
-        <p>Sou Geógrafo formado pela Universidade Federal de Pernambuco que atua na área de Geoprocessamento e Produção de Mapas há 4 anos. Atuei em projetos de Monitoramento Ambiental, Monitoramento Agrícola e Pesquisas da Climatologia Urbana.</p>
-        <p>Meu propósito é usar todos os meus conhecimentos e experiências que acumulei nesses anos para apoiar profissionais, pesquisadores e empresas nos projetos que envolvem o meio ambiente, planejamento territorial e inteligência geográfica.</p>
-        <p>O mundo das Geotecnologias é incrível. 🌐🤩</p>
-      </div>
     </div>
   </section>
 
