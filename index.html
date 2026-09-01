@@ -78,49 +78,9 @@
     .tick{font-size:8px;}
   }
 
-  /* ---------- Legend nav ---------- */
-  header{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:50;
-    background:var(--mangue);
-    border-bottom:1px solid rgba(0,0,0,0.25);
-  }
-  .nav-wrap{
-    max-width:1100px;
-    margin:0 auto;
-    padding:16px 32px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-  }
-  .brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600;
-    font-size:1.5rem;
-    line-height:1.2;
-    text-decoration:none;
-    color:var(--paper);
-  }
-  .brand .swatch{
-    width:16px;height:16px;
-    background:var(--forest);
-    border:1px solid var(--paper);
-    flex-shrink:0;
-  }
-
-  /* Offset page content so it isn't hidden under the fixed header */
+  /* Offset page content for the fixed frame */
   main{
-    padding-top:76px;
-  }
-  @media (max-width:640px){
-    main{padding-top:96px;}
+    padding-top:26px;
   }
 
   /* ---------- Hero / title block ---------- */
@@ -581,12 +541,6 @@
 <div class="tick tick-tr">34.90°W</div>
 <div class="tick tick-bl">SIRGAS 2000</div>
 <div class="tick tick-br">PE · BR</div>
-
-<header>
-  <div class="nav-wrap">
-    <a href="https://carlosgeo.com.br/#top" class="brand">Serviços de Geoprocessamento, Consultoria &amp; Treinamentos</a>
-  </div>
-</header>
 
 <main id="top">
 
